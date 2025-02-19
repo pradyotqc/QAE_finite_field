@@ -50,8 +50,8 @@ def SC_0(ref_state, integral_dict):
 def SC_1(state_bra, state_ket, integral_dict):
     sum_one  = 0
     sum_two = 0
-    m = list(set(state_ket) - set(state_bra))
-    p = list(set(state_bra) - set(state_ket))
+    p = list(set(state_ket) - set(state_bra))
+    m = list(set(state_bra) - set(state_ket))
     for i in state_bra:
         for j in state_ket:
             if i not in state_ket and j not in state_bra:
@@ -72,8 +72,8 @@ def SC_1(state_bra, state_ket, integral_dict):
 
 # %%
 def SC_2(state_bra, state_ket, integral_dict):
-    m = list(set(state_ket) - set(state_bra))
-    p = list(set(state_bra) - set(state_ket))
+    p = list(set(state_ket) - set(state_bra))
+    m = list(set(state_bra) - set(state_ket))
     sum_two = 0
     try: 
         sum_two += integral_dict[f"({m[0]}, {p[0]}, {m[1]}, {p[1]})"]
